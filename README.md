@@ -11,3 +11,15 @@ https://www.youtube.com/watch?v=dEaUikT1-R0
 https://github.com/verekia/js-stack-from-scratch/blob/master/tutorial/02-babel-es6-eslint-flow-jest-husky.md#eslint
 
    npm info eslint-config-airbnb@latest peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add --dev eslint-config-airbnb@latest
+
+---
+
+Чтобы запустить проверку в командной строке, нужен пакет eslint.
+
+На сегодняшний день (в ноябре 2017, например) мы можем использовать
+
+```bash
+npx eslint MyComp.jsx
+```
+
+... для того, чтобы запустить eslint «временно», не загружая его в проект. При этом настройка типа eslint-config-airbnb или eslint-config-rallycoding должна быть в node_modules
