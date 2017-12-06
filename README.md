@@ -1,25 +1,35 @@
-https://kodaktor.ru/g/eslint
+В этой ветке используется минимальная конфигурация ESLint - без красивостей типа const obg = { key: 'prop' };
 
-здесь также используется простейшая настройка nodemon
+Но зато подключена проверка Flow - для этого используются babel-preset-flow и соотв. настройка в .babelrc
 
-и экспериментальный импорт/экспорт в стиле node 8.5.0 (осень 2017)
+и
 
-Настройка линтера для Atom:
+```
+{
+  "extends": [
+   "rallycoding",
+   "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "flowtype"
+  ],
+  "rules": {
+    "no-alert": 0,
+  }
+}
 
-https://www.youtube.com/watch?v=dEaUikT1-R0
-
-https://github.com/verekia/js-stack-from-scratch/blob/master/tutorial/02-babel-es6-eslint-flow-jest-husky.md#eslint
-
-   npm info eslint-config-airbnb@latest peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add --dev eslint-config-airbnb@latest
-
----
-
-Чтобы запустить проверку в командной строке, нужен пакет eslint.
-
-На сегодняшний день (в ноябре 2017, например) мы можем использовать
-
-```bash
-npx eslint MyComp.jsx
 ```
 
-... для того, чтобы запустить eslint «временно», не загружая его в проект. При этом настройка типа eslint-config-airbnb или eslint-config-rallycoding должна быть в node_modules
+И в package.json у нас start: "nodemon --watch"
+
+и соотв.
+
+```
+{
+  "execMap": {
+    "js": "flow && babel-node"
+  }
+}
+```
+в файле nodemon.json
+
