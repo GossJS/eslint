@@ -20,7 +20,7 @@
 
 ```
 
-И в package.json у нас start: "nodemon --watch"
+И в package.json у нас `start: "nodemon --watch"`
 
 и соотв.
 
