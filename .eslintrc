@@ -1,7 +1,0 @@
-{
-  "extends": "rallycoding",
-  "rules": {
-    "no-alert": 0,
- 
-  }
-}
