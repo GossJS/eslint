@@ -7,7 +7,6 @@
 ```
 {
   "extends": [
-   "rallycoding",
    "plugin:flowtype/recommended"
   ],
   "plugins": [
