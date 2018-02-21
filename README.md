@@ -4,17 +4,20 @@ https://kodaktor.ru/g/eslint
 
 и экспериментальный импорт/экспорт в стиле node 8.5.0 (осень 2017)
 
+Нижеследующая настройка предоставлена airbnb и включает сам линтер и набор правил. Этого достаточно для работы с Atom (при условии что в Atom установлен его собственный плагин linter и linter-eslint)
+
+   npm info eslint-config-airbnb@latest peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add --dev eslint-config-airbnb@latest
+
 Настройка линтера для Atom:
 
 https://www.youtube.com/watch?v=dEaUikT1-R0
 
 https://github.com/verekia/js-stack-from-scratch/blob/master/tutorial/02-babel-es6-eslint-flow-jest-husky.md#eslint
 
-   npm info eslint-config-airbnb@latest peerDependencies --json | command sed 's/[\{\},]//g ; s/: /@/g' | xargs yarn add --dev eslint-config-airbnb@latest
 
 ---
 
-Чтобы запустить проверку в командной строке, нужен пакет eslint.
+Чтобы запустить проверку в командной строке, независимо от редактора, нужен пакет eslint.
 
 На сегодняшний день (в ноябре 2017, например) мы можем использовать
 
