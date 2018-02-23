@@ -1,7 +1,6 @@
 {
-  "extends": "rallycoding",
+  "extends": "airbnb",
   "rules": {
-    "no-alert": 0,
- 
+    "no-console": 0
   }
 }
